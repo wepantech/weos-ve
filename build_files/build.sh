@@ -10,16 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y gnome-shell-extension-dash-to-panel gnome-menus 
-
-# Brother HL-3142CW drivers
-rpm -i --nodeps --noverify https://download.brother.com/welcome/dlf101630/hl3142cwlpr-1.1.3-0.i386.rpm
-
-rpm -i --nodeps --noverify https://download.brother.com/welcome/dlf101631/hl3142cwcupswrapper-1.1.4-0.i386.rpm
-
-#Copy driver in /usr/lib64/cups/filter
-mkdir -p /usr/lib64/cups/filter
-cp /usr/lib/cups/filter/brother_lpdwrapper_hl3142cw /usr/lib64/cups/filter/
+dnf5 install -y gnome-shell-extension-dash-to-panel gnome-menus
 
 
 # Use a COPR Example:
