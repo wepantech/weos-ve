@@ -23,7 +23,7 @@ FROM ghcr.io/ublue-os/bluefin:stable
 ## Uncomment the following line if one desires to make /opt immutable and be able to be used
 ## by the package manager.
 
-# RUN rm /opt && mkdir /opt
+RUN rm /opt && mkdir /opt
 
 ### COPY ENCRYPTED PART INTO THE IMAGE
 COPY encrypted /encrypted/
