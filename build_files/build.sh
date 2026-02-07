@@ -17,6 +17,11 @@ rpm -i --nodeps --noverify https://download.brother.com/welcome/dlf101630/hl3142
 
 rpm -i --nodeps --noverify https://download.brother.com/welcome/dlf101631/hl3142cwcupswrapper-1.1.4-0.i386.rpm
 
+#Copy driver in /usr/lib64/cups/filter
+mkdir -p /usr/lib64/cups/filter
+cp /usr/lib/cups/filter/brother_lpdwrapper_hl3142cw /usr/lib64/cups/filter/
+
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
