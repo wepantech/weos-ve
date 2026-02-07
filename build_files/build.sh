@@ -12,6 +12,11 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y gnome-shell-extension-dash-to-panel gnome-menus 
 
+# Brother HL-3142CW drivers
+rpm -i --nodeps --noverify https://download.brother.com/welcome/dlf101630/hl3142cwlpr-1.1.3-0.i386.rpm
+
+rpm -i --nodeps --noverify https://download.brother.com/welcome/dlf101631/hl3142cwcupswrapper-1.1.4-0.i386.rpm
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
